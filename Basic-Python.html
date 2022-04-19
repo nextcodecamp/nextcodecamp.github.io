@@ -17,6 +17,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -28,7 +29,7 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-658d"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1194" data-image-height="1194">
+        <a href="https://nextcodecamp.github.io" class="u-image u-logo u-image-1" data-image-width="1194" data-image-height="1194" title="nx">
           <img src="images/autodraw2022-04-18.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -69,7 +70,7 @@
       </div>
     </section>
     <section class="u-clearfix u-grey-10 u-section-2" id="carousel_5e54">
-      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-black u-container-style u-group u-group-1">
           <div class="u-container-layout u-valign-middle u-container-layout-1">
             <h2 class="u-text u-text-default u-text-1">บทเรียนและโค้ด</h2>
@@ -78,29 +79,232 @@
         <div class="u-accordion u-expanded-width u-accordion-1">
           <div class="u-accordion-item">
             <a class="active u-accordion-link u-button-style u-accordion-link-1" id="link-accordion-2b95" aria-controls="accordion-2b95" aria-selected="true">
-              <span class="u-accordion-link-text">EP1. เริ่มต้นไพธอนด้วยการเขียนข้อความกับคำสั่ง print</span>
+              <span class="u-accordion-link-text">EP.1 เริ่มต้นไพธอนด้วยการเขียนข้อความกับคำสั่ง print</span>
             </a>
             <div class="u-accordion-active u-accordion-pane u-container-style u-white u-accordion-pane-1" id="accordion-2b95" aria-labelledby="link-accordion-2b95">
-              <div class="u-container-layout u-container-layout-2"></div>
-            </div>
-          </div>
-          <div class="u-accordion-item">
-            <a class="u-accordion-link u-button-style u-accordion-link-2" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
-              <span class="u-accordion-link-text">EP2.&nbsp;</span>
-            </a>
-            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-2" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
-              <div class="u-container-layout u-container-layout-3">
-                <p class="u-text u-text-default u-text-2">You tell us three important things: your starting point, ending point, and how you get between the two. We do the rest by automatically calculating your emissions based on the type of vehicle or transportation mode you use.</p>
+              <div class="u-container-layout u-container-layout-2">
+                <p class="u-text u-text-default u-text-2"> ตัวอย่างที่ 1 การใช้คำสั่ง print ซึ่งกำกับด้วย Single quote หรือ Double quote<br>print("Hello")<br>print('Hello')<br>
+                  <br>ตัวอย่างที่ 2 แสดงข้อความจากตัวแปร&nbsp;<br>text = "Basic python" #text มีชนิดข้อมูล เป็น String <br>text2 = "This is the EP1."<br>print("Message ",text,text2)<br>print("Message is ",text," example ",text2)<br>print("First message is ",text, "\n Second message is ", text2)<br>
+                  <br>ตัวอย่างที่ 3 การแสดงข้อความที่มีสัญลักษณ์พิเศษ (เช่น " , ', #, @)<br>print("The message has double quote \"\" ")<br>print('The message has double quote \'\' ')<br>print("Copyright @2022 ")<br>print('Copyright @2022 ')<br>
+                </p>
               </div>
             </div>
           </div>
           <div class="u-accordion-item">
+            <a class="u-accordion-link u-button-style u-accordion-link-2" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text">EP.2 ชนิดข้อมูล boolean, int, float&nbsp;</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-2" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-3">
+                <p class="u-text u-text-default u-text-3">
+                  <span style="font-weight: 700;">Data type</span>
+                  <br>
+                  <br>ชนิดข้อมูลพื้นฐานใน Python<br>- Boolean type <br>- Numeric type - int, float, complex<br>- Sequence Types — list, tuple, range<br>- Text Sequence Type — str<br>- Mapping Type - dict<br>
+                  <br>
+                  <span style="font-weight: 700;">Boolean type</span>
+                  <br>ชนิดข้อมูลบูลีน มีค่าที่เป็นไปได้คือ จริง (True) หรือ เท็จ (False)<br>clockStart = True <br>print("Status of clock is ",clockStart)<br>clockStart = False<br>print("Status of clock is ",clockStart)<br>
+                  <br>
+                  <span style="font-weight: 700;">Numeric type<br>
+                  </span>ตัวอย่างที่ 1 ชนิดข้อมูล int แสดงเลขจำนวนเต็มซึ่งเป็นบวกหรือลบก็ได้<br>price = 100<br>discount = -20<br>total = price + discount    # total = price - discount if discount is negative value.<br>print("Product price is ",price)<br>print("Discount is ",discount)<br>print("Total product price is ",total)<br>
+                  <br>ตัวอย่างที่ 2 ชนิดข้อมูล float แสดงเลขจำนวนจริงหรือเลขที่มีจุดทศนิยม<br>savingMoney = 500000<br>interestRate = 0.05<br>savingInterest = 500000 * interestRate <br>print("I have ",savingMoney," in the bank account.")<br>print("Interest rate is ",interestRate)<br>print("I will get interest ",savingInterest)&nbsp;<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-3">
             <a class="u-accordion-link u-button-style u-accordion-link-3" id="link-accordion-96a5" aria-controls="accordion-96a5" aria-selected="false">
-              <span class="u-accordion-link-text">EP3.</span>
+              <span class="u-accordion-link-text">EP.3 ชนิดข้อมูลแบบลิสต์ (List)</span>
             </a>
             <div class="u-accordion-pane u-container-style u-white u-accordion-pane-3" id="accordion-96a5" aria-labelledby="link-accordion-96a5">
               <div class="u-container-layout u-container-layout-4">
-                <p class="u-text u-text-default u-text-3">การศึกษาสร้างอนาคต การลงทุนทางด้านการศึกษาจึงคุ้มค่าเสมอ</p>
+                <p class="u-text u-text-default u-text-4">
+                  <span style="font-weight: 700;">Sequence type&nbsp;<br>List<br>
+                  </span>ตัวอย่างที่ 1 การสร้างลิสต์ด้วยการประกาศค่า<br>day = ["Monday" ,"Tuesday" ,"Wednesday" ,"Thursday","Friday","Saturday","Sunday" ]  # สมาชิกจะมีชนิดข้อมูลแบบเดียวกัน เรียกว่า Homogenous data<br>print("All days are ",day)<br>print("First day of the week is ",day[0])<br>print("Last day of the week is ",day[6])<br>
+                  <br>ตัวอย่างที่ 2 การสร้างลิสต์ด้วยการเพิ่มสมาชิกเข้าลิสต์<br>weekend = [] <br>weekend.append("Saturday")<br>weekend.append("Sunday")<br>print(weekend)<br>len(weekend)      #คำสั่ง len หาจำนวนสมาชิกที่อยู่ลิสต์ได้<br>
+                  <br>ตัวอย่างที่ 3 การแก้ไขค่าและลบค่าในลิสต์<br>day.remove("Sunday")<br>print("After remove:",day)<br>day.append("Sunday")<br>print("After append:",day)<br>
+                  <br>แก้ไขค่าในลิสต์<br>day[0]="23 Monday"<br>print("Add 23 to Monday",day[0])<br>day[0]="Monday"<br>print("Create day",day[0])<br>print(day)<br>
+                  <br>
+                  <br>เอาสมาขิกออกจากลิสต์ แล้วสังเกตดูการอ้างอิง<br>print("Wednesday is indexed by 2 ")<br>day.remove("Wednesday")<br>print(day)<br>print("Member indexed by 2 is ",day[2])<br>day.insert(2,"Wednesday")<br>print(day)<br>
+                  <br>ตัวอย่างที่ 4 การเรียกใช้ reverse ในลิสต์<br>print(weekend)<br>weekend.reverse()<br>print(weekend)<br>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-4">
+            <a class="u-accordion-link u-button-style u-accordion-link-4" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.4 ชนิดข้อมูล Tuple และการหาชนิดข้อมูลของตัวแปร</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-4" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-5">
+                <p class="u-text u-text-default u-text-5">
+                  <span style="font-weight: 700;"> Tuple</span>
+                  <br>เป็นชนิดข้อมูลที่ไม่สามารถเปลี่ยนแปลงค่าได้ เป็นชนิดข้อมูลที่มีสมาชิกที่มีชนิดข้อมูลต่างกันได้<br>
+                  <br>ตัวอย่างที่ 1 การสร้าง Tuple<br>mytuple = ("Adele", 23, "Female", 160)<br>print(mytuple)<br>print("Name:",mytuple[0])<br>print("Age:",mytuple[1])<br>print("Sex:",mytuple[2])<br>print("Height:",mytuple[3])<br>
+                  <br>ตัวอย่างที่ 2 การนับสมาชิกใน Tuple<br>mytuple.count("Female")<br>
+                  <br>ตัวอย่างที่ 3 การสร้างลิสต์ใน tuple&nbsp;<br>student = (["Nana", 23, "Female", 160],<br> ["Alex",25,"Male",170],<br> ["Peter", 23,"Male",175])<br>print("Student 1:", student[0])<br>print("Student 2:", student[1])<br>print("Student 3:", student[2])<br>print("There are ",len(student)," persons.")<br>
+                  <br>
+                  <span style="font-weight: 700;">การหาชนิดข้อมูลของตัวแปรสามารถใช้คำสั่ง type(...)</span>
+                  <br>myvariable = 300&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;       #Dynamic type binding เปลี่ยนแปลงชนิดข้อมูลได้ตลอดเวลารัน<br>type(myvariable)<br>myvariable = 44.556<br>type(myvariable)<br>myvariable = "World"<br>type(myvariable)<br>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-5">
+            <a class="u-accordion-link u-button-style u-accordion-link-5" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.5 ชนิดข้อมูล String และการสร้างลิสต์จากสตริง</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-5" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-6">
+                <p class="u-text u-text-default u-text-6">
+                  <span style="font-weight: 700;"> String<br>
+                  </span>เราสามารถเขียนสตริงใน 2 รูปแบบ คือการแสดงข้อความสตริงบรรทัดเดียว และแบบหลายบรรทัด<br>
+                  <br>ตัวอย่างที่ 1 การแสดงข้อความบรรทัดเดียวด้วย Double quote และ Single<br>str1 = "Friday."<br>str2 = "last day of the week."<br>print(str1," is a ",str2)<br>
+                  <br>ตัวอย่างที่ 2 การแสดงข้อความแบบหลายบรรทัดกำกับด้วย """....""" หรือ '''....'''<br>multiline = '''<br>Hello!<br>'Today is Friday'. @24March,2022<br>'''<br>print("Multiline string:",multiline)<br>
+                  <br>ตัวอย่างที่ 3 หาความยาวสตริงด้วยฟังก์ชัน len<br>message = "Hello Friday"<br>print("Length of ",message," is ", len(message))<br>
+                  <br>ตัวอย่างที่ 4 การเข้าถึงอักขระในสตริง<br>print(message, " has ",message[0], "in the first position.")<br>print(message, " has ",message[11], "in the last position.")<br>
+                  <br>ตัวอย่างที่ 5 สร้างลิสต์จากสตริง<br>list(message)<br>strlist = list(message)<br>print("List generated from string", strlist)<br>print("Member at the first position:",strlist[0])<br>print(tuple(message))<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-6">
+            <a class="u-accordion-link u-button-style u-accordion-link-6" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.6 ชนิดข้อมูล Dictionary</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-6" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-7">
+                <p class="u-text u-text-default u-text-7">
+                  <span style="font-weight: 700;">Dictionary<br>
+                  </span>
+                  <br>แสดงกลุ่มข้อมูลที่สามารถกำหนดในลักษณะ Key-value คล้าย Associative array <br>
+                  <br>ตัวอย่างที่ 1 การกำหนดตัวแปรที่มีชนิดข้อมูล Dictionary (dict)<br>book ={ "title":"Basic python","price": 200, "published":"23/03/2022"  }<br>print(book)<br>print("Title: ",book["title"])<br>print("Price: ",book["price"])<br>print("Published:",book["published"])<br>
+                  <br>ตัวอย่างที่ 2 การแก้ไขค่าใน Dictionary&nbsp;<br>book["price"] = 500<br>print(book)&nbsp;<br>
+                  <br>ตัวอย่างที่ 3 การลบสมาชิกใน Dictionary<br>del(book["published"]) <br>print(book)<br>
+                  <br>ตัวอย่างที่ 4 สร้างลิสต์จาก Key ของ Dictionary<br>newlist = list(book)<br>print(newlist)<br>
+                  <br>ตัวอย่างที่ 5 การสร้างลิสต์ที่เกิดจากการเรียงลำดับคีย์ของ Dictionary<br>newsort = sorted(book)<br>print(newsort)<br>
+                  <br>ตัวอย่างที่ 6 การค้นหาค่าคีย์ใน Dictionary<br>'price' in book&nbsp;<br>'published' in book<br>'published' not in book<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-7">
+            <a class="u-accordion-link u-button-style u-accordion-link-7" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.7 โครงสร้างโปรแกรม</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-7" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-8">
+                <p class="u-text u-text-default u-text-8">
+                  <span style="font-weight: 700;">โครงสร้างโปรแกรมในภาษาไพธอน<br>
+                  </span>#Global scope<br>day = "Sunday"<br>
+                  <br>def myfunction1():<br> &nbsp; &nbsp;print("This is myfuction1")<br> &nbsp; &nbsp;print("Here is another area")<br>
+                  <br>def myfunction2():<br> &nbsp; &nbsp;print("This is myfunction2")<br> &nbsp; &nbsp;print("Here is another area")<br>
+                  <br>print("Today is ",day)<br>myfunction1()<br>myfunction2()<br>if (day=="Sunday"):<br> &nbsp; &nbsp;print("I have to go to gym.")<br> &nbsp; &nbsp;print("I am very active.")<br>else:<br> &nbsp; &nbsp;print("I have to cook.")<br> &nbsp; &nbsp;print("I am very hungry.")<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-8">
+            <a class="u-accordion-link u-button-style u-accordion-link-8" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.8 คำสั่งควบคุม if...else, if...elif..else</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-8" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-9">
+                <p class="u-text u-text-default u-text-9">
+                  <span style="font-weight: 700;"> คำสั่งควบคุม</span>
+                  <br>
+                  <br>มี 3 กลุ่ม<br>
+                  <br>1.   คำสั่งควบคุมแบบสองทางเลือก. if...else, if...elif...else<br>2.   คำสั่งควบคุมแบบหลายทางเลือก switch...case<br>3.   คำสั่งควบคุมแบบวนซ้ำ for...in..., while...&nbsp;<br>
+                  <br>ตัวอย่างที่ 1 คำสั่งควบคุมแบบสองทางเลือก if...else<br>x = 50<br>if (x &gt; 50):<br> &nbsp; &nbsp;print("Variable is bigger than 50.")<br> &nbsp; &nbsp;print("Variable x is ",x)<br>else:               #x &lt;= 50<br> &nbsp; &nbsp;print("Variable may be 50 or less than 50.")<br> &nbsp; &nbsp;print("Variable x is ",x)<br>
+                  <br>ตัวอย่างที่ 2 คำสั่ง if..elif..else<br>score = 80<br>if (score &gt;= 80):<br> &nbsp; &nbsp;print("Got A!")<br>elif (score &gt;=70):<br> &nbsp; &nbsp;print("Got B!")<br>elif (score &gt;=60):<br> &nbsp; &nbsp;print("Got C!")<br>elif (score &gt;=50):<br> &nbsp; &nbsp;print("Got D!")<br>else:<br> &nbsp; &nbsp;print("Got F!")<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-9">
+            <a class="u-accordion-link u-button-style u-accordion-link-9" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.9 สร้างคำสั่งแบบหลายทางเลือกด้วย if..elif..else และ dict</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-9" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-10">
+                <p class="u-text u-text-default u-text-10">
+                  <span style="font-weight: 700;"> คำสั่งควบคุมแบบหลายทางเลือกใน Python</span>
+                  <br>
+                  <br>ในภาษา Python ไม่มีคำสั่ง switch...case แต่สามารถใช้ if...elif..else แทนได้ หรือใช้ชนิดข้อมูลแบบ dict <br>
+                  <br>ตัวอย่างภาษา C++ ที่มี switch...case<br>
+                  <br>#include &lt;iostream&gt;<br>
+                  <br>using namespace std;<br>
+                  <br>int main () {<br>
+                  <br> int day = 1;<br>
+                  <br> switch(day) {<br>
+                  <br> case 1 :<br> cout &lt;&lt; "Monday" &lt;&lt; endl; break;<br> case 2 :<br> cout &lt;&lt; "Tuesday" &lt;&lt; endl;break;<br> case 3 :<br> cout &lt;&lt; "Wednesday" &lt;&lt; endl;break;<br> case 4 :<br> cout &lt;&lt; "Thursday" &lt;&lt; endl;break;<br> case 5 :<br> cout &lt;&lt; "Friday" &lt;&lt; endl;break;<br> case 6 :<br> cout &lt;&lt; "Saturday" &lt;&lt; endl;break;<br> case 7 :<br> cout &lt;&lt; "Sunday" &lt;&lt; endl;break;<br> default :<br> cout &lt;&lt; "Unknow" &lt;&lt; endl;<br> }<br>
+                  <br> return 0;<br>
+                  <br>}<br>
+                  <br>ตัวอย่างที่ 1 การใช้คำสั่ง if...elif...else<br>day = 1<br>if day == 1:<br> &nbsp; &nbsp;print("Monday")<br> &nbsp; &nbsp;print("Yellow")<br>elif day == 2:<br> &nbsp; &nbsp;print("Tuesday")<br>elif day == 3:<br> &nbsp; &nbsp;print("Wednesday")<br>elif day == 4:<br> &nbsp; &nbsp;print("Thursday")<br>elif day == 5:<br> &nbsp; &nbsp;print("Friday")<br>elif day == 6:<br> &nbsp; &nbsp;print("Saturday")<br>elif day == 7:<br> &nbsp; &nbsp;print("Sunday")<br>else:<br> &nbsp; &nbsp;print("Unknow")<br>
+                  <br>
+                  <br>ตัวอย่างที่ 2<br>today = 0<br>day = {1: "Monday",<br> 2: "Tuesday",<br> 3: "Wednesday",<br> 4: "Thursday",<br> 5: "Friday",<br> 6: "Saturday",<br> 7: "Sunday" }<br>day.get(today,"Unknow")<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-10">
+            <a class="u-accordion-link u-button-style u-accordion-link-10" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.10 การใช้คำสั่งวนซ้ำ for...in และ while</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-10" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-11">
+                <p class="u-text u-text-default u-text-11">
+                  <span style="font-weight: 700;">คำสั่งวนซ้ำ</span>
+                  <br>
+                  <br>
+                  <span style="font-weight: 700;">for</span>
+                  <br>ตัวอย่างที่ 1 การใช้คำสั่ง for...in เพื่อทำงานกับลิสต์<br>fruit = ['apple', 'mango', 'pineapple','watemelon']<br>for name in fruit:<br> print(name)<br>
+                  <br>ตัวอย่างที่ 2 การใช้คำสั่ง for...in กับ tuple<br>mytuple = ('Hi', 200, ["A", "B"])<br>for myinfo in mytuple:<br> &nbsp; &nbsp;print(myinfo)<br>
+                  <br>ตัวอย่างที่ 3 การใช้คำสั่ง for...in กับ dictionary<br>book = { "name" : "Jonathan", "price": 200 }<br>for mybook in book:<br> &nbsp; &nbsp;print(mybook," has value:", book[mybook])<br>
+                  <br>ตัวอย่างที่ 4 การใช้คำสั่ง for...in range<br>for number in range(100):    #number 0...99<br> &nbsp; &nbsp;print(number)<br>
+                  <br>for number in range(5,10):   #start 5 ...9<br> &nbsp; &nbsp;print(number)<br>
+                  <span style="font-weight: 700;">
+                    <br>คำสั่ง while
+                  </span>
+                  <br>
+                  <br>ตัวอย่างที่ 1 การใช้คำสั่ง while มีนิพจน์<br>x = 0<br>while (x &lt;=5):&nbsp; &nbsp; #start x = 0 end at x = 5<br> &nbsp; &nbsp;print(x)<br>&nbsp; &nbsp;x += 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;      # x = x + 1<br>
+                  <br>ตัวอย่างที่ 2 การใช้ else ร่วมกับการวนซ้ำ&nbsp;<br>x = 0<br>while (x &lt;=5):&nbsp; &nbsp;#start x = 0 end at x = 5<br> &nbsp; &nbsp;print(x)<br>&nbsp; &nbsp;x += 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      # x = x + 1<br>else:<br> &nbsp; &nbsp;print("Else:", x)<br>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-11">
+            <a class="u-accordion-link u-button-style u-accordion-link-11" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.11 การสร้างฟังก์ชัน</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-11" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-12">
+                <p class="u-text u-text-default u-text-12">
+                  <span style="font-weight: 700;"> ฟังก์ชัน</span>
+                  <br>
+                  <br>ตัวอย่างที่ 1 การประกาศฟังก์ชัน<br>def sumcalculator(x,y):<br>&nbsp; &nbsp;result = x + y<br> &nbsp; &nbsp;print(result)<br> &nbsp; &nbsp;return result<br>
+                  <br>sumtotal = sumcalculator(12,15)<br>print(sumtotal)<br>
+                  <br>ตัวอย่างที่ 2 การประกาศฟังก์ชันที่มีพารามิเตอร์มีค่าดีฟอลต์<br>def sumcalculatorwithdefault(x=0, y =0):<br>&nbsp; &nbsp;result = x + y<br> &nbsp; &nbsp;print(result)<br> &nbsp; &nbsp;return result<br>
+                  <br>sumtotal = sumcalculatorwithdefault(12,15)<br>print("Result", sumtotal)<br>sumtotal = sumcalculatorwithdefault()<br>print("Result", sumtotal)<br>sumtotal = sumcalculatorwithdefault(12)<br>print("Result", sumtotal)<br>
+                  <br>ตัวอย่างที่ 3 การจับคู่ของพารามิเตอร์ โดยการระบุชื่อพารามิเตอร์ จะมีการกำหนดโดยใช้ชื่อ และไม่สนใจลำดับ<br>sumtotal = sumcalculatorwithdefault( y = 50,x = 40)<br>print(sumtotal)<br>sumtotal = sumcalculatorwithdefault( x = 40,y = 50)<br>print(sumtotal)<br>xvar = 80<br>yvar = 90<br>sumtotal = sumcalculatorwithdefault( x = xvar,y = yvar)<br>print(sumtotal)<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item">
+            <a class="u-accordion-link u-button-style u-accordion-link-12" id="link-accordion-02ba" aria-controls="accordion-02ba" aria-selected="false">
+              <span class="u-accordion-link-text"> EP.12 การรับอินพุตเข้ากับฟังก์ชัน input()</span>
+            </a>
+            <div class="u-accordion-pane u-container-style u-white u-accordion-pane-12" id="accordion-02ba" aria-labelledby="link-accordion-02ba">
+              <div class="u-container-layout u-container-layout-13">
+                <p class="u-text u-text-default u-text-13">
+                  <span style="font-weight: 700;"> ฟังก์ชัน Input</span>
+                  <br>
+                  <br>ใช้ในการรับข้อมูลจากคีย์บอร์ด<br>print("Please enter price: ")<br>x = input("Price:")<br>print(x)<br>
+                  <br>ปกติฟังก์ชัน input() จะรับค่าข้อมูลเข้าซึ่งเป็น String&nbsp;<br>a = input("number1:")<br>b = input("number2:")<br>result = a + b             # ตัวดำเนินการ + เป็นการต่อสตริง<br>print("Sum is ",result," ",type(result))&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # ผลลัพธ์เป็นสตริง<br>result = int(a) + int(b)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# ผลลัพธ์เป็นเลขจำนวนเต็ม<br>print("Sum is ",result," ",type(result))&nbsp;<br>
+                </p>
               </div>
             </div>
           </div>
@@ -108,7 +312,7 @@
       </div>
     </section>
     <section class="u-clearfix u-section-3" id="sec-e091">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-align-left u-border-3 u-border-color-2-base u-expanded-width u-left-0 u-shape u-shape-1"></div>
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -116,13 +320,13 @@
               <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-43 u-layout-cell-1">
                 <div class="u-container-layout u-valign-middle u-container-layout-1">
                   <h3 class="u-text u-text-default u-text-1">ปลดล็อกเพื่อดูซอร์สโค้ด</h3>
-                  <p class="u-text u-text-2">เพียงแค่คุณบริจาคเงินเล็กๆ น้อยๆ คุณก็สามารถที่จะปลดล็อคโค้ดได้<br>การบริจาคเพียงโอนเงินเข้าสู่บัญชีคุณก็สามารถดูโค้ดทั้งหมดของ Basic Python ได้
+                  <p class="u-text u-text-2">เพียงแค่คุณบริจาคเงินเล็กๆ น้อยๆ คุณก็สามารถที่จะปลดล็อคโค้ดได้<br>การบริจาคเพียงโอนเงินเข้าสู่บัญชีคุณก็สามารถดูโค้ดทั้งหมดของ Basic Python ได้<br>โดยสามารถนำไปรันใน Colab&nbsp;
                   </p>
                 </div>
               </div>
               <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-17 u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <a href="#" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Donate us</a>
+                  <a href="Donate-us.html" data-page-id="455406076" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-1">Donate us</a>
                 </div>
               </div>
             </div>
@@ -132,8 +336,9 @@
     </section>
     
     
+    
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f93f"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">@Copyright 2022</p>
+        <p class="u-small-text u-text u-text-variant u-text-1">Copyright @ 2022 by nextcodecamp.com</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
       <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
