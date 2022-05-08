@@ -23,6 +23,9 @@
     
     
     
+    
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -198,7 +201,7 @@
                 <div class="u-container-layout u-container-layout-2">
                   <p class="u-text u-text-grey-40 u-text-3">
                     <span style="font-weight: 700;">Word embedding</span> คือวิธีการแสดงข้อความหรือเท็กซ์ให้อยู่ในรูปแบบของเวคเตอร์ที่แสดงค่าข้อมูลด้วยตัวเลข&nbsp;<br>Google แนะนำ <span style="font-weight: 700;">One-hot encoding</span> เป็นวิธีพื้นฐานในการแสดงคำ (Vocabulary) ที่ปรากฎในข้อความ เช่น จากภาพ Vocabulary แสดงในคอลัมภ์ของเวคเตอร์ และคำแต่ละคำจากเอกสารหรือข้อความจะสัมพันธ์กับเวคเตอร์ เช่น กำหนด Dimensions ของเวตเคอร์แสดงคำศัพท์ คือ tonight I, you, eating, home<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tonight&nbsp; I&nbsp; &nbsp; &nbsp;you&nbsp; &nbsp; &nbsp;eating&nbsp; &nbsp;home&nbsp; &nbsp; &nbsp;<br>ประโยคคือ Tonight, I am waiting for you for eating together at home.<br>tonight = [ 1, 0, 0, 0, 0]<br>I = [0,1,0,0,0]<br>am=[0,0,0,0,0]<br>waiting=[0,0,0,0,0]<br>for=[0,0,0,0,0]<br>you=[0,0,1,0,0]<br>eating=[0,0,0,1,0]<br>together=[0,0,0,0,0]<br>at=[0,0,0,0,0]<br>home=[0,0,0,0,1]&nbsp;<br>
-                    <br>ข้อเสียของ One-hot encoding คือจะมีเวคเตอร์ที่มีค่า 0 อยู่เป็นจำนวนมาก<br>อีกเทคนิคหนึ่งที่สามารถทำ encoding ได้คือ การระบุหมายเลขของคำทีพบเช่น&nbsp;<br>vector = [1,2,6,7,10]&nbsp;<br>แต่วิธีนี้ก็ยังไม่สามารถแสดงให้เห็นความสัมพันธ์ของคำได้<br>
+                    <br>ข้อเสียของ One-hot encoding คือจะมีเวคเตอร์ที่มีค่า 0 อยู่เป็นจำนวนมาก ซึ่งอาจทำให้เสียหน่วยความจำมาก เราเรียกเวคเตอร์ลักษณะนี้ว่า <span style="font-weight: 700;">Sparse vector</span>&nbsp;<br>อีกเทคนิคหนึ่งที่สามารถทำ encoding ได้คือ การระบุหมายเลขของคำทีพบเช่น&nbsp;<br>vector = [1,2,6,7,10]&nbsp;<br>แต่วิธีนี้ก็ยังไม่สามารถแสดงให้เห็นความสัมพันธ์ของคำได้<br>
                     <br>
                     <span style="font-weight: 700;">Word embedding</span> ใช้เทคนิคในการวิเคราะห์ความสัมพันธ์ของคำ โดยพิจารณาบริบทของคำ (ตำแหน่งของคำและคำอื่นๆข้างเคียง)<br>เวคเตอร์แสดงค่าน้ำหนักที่ได้จากการเรียนรู้โดยใช้ฐานข้อมูลคำหรือคอร์ปัส&nbsp; Neural network นำไปใช้ในการเรียนรู้เพื่อหาค่าน้ำหนักของคำ ซึ่งค่าน้ำหนักของคำในเวคเตอร์แสดงความสัมพันธ์เชิงความหมาย (พิจารณาจากบริบทของคำ) ซึ่งได้จากการเรียนรู้เวคเตอร์อาจมีขนาด 4-dimension ไปจนถึง 1024-dimension ตัวอย่าง (ดูภาพซ้ายมือ)<br>&nbsp;<br>Word2vec สนับสนุนการเรียนรู้ด้วยเทคนิคจำนวน 2 เทคนิค คือ<br>1. Continuous bag-of-word model&nbsp;<br>2. Continuous skip-gram model&nbsp;&nbsp;<br>
                   </p>
@@ -258,7 +261,154 @@
         <p class="u-text u-text-default u-text-5">ภาพจาก ​https://arxiv.org/pdf/1301.3781.pdf</p>
       </div>
     </section>
-    <section class="u-align-center u-clearfix u-image u-shading u-section-7" id="carousel_0f1d" data-image-width="1620" data-image-height="1080">
+    <section class="u-clearfix u-section-7" id="sec-341e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
+          <h1 style="text-align: center;">Word embedding&nbsp;</h1>
+          <ul>
+            <li style="text-align: center;">
+              <span style="line-height: 2.0;">Word2vec ทำ Word embedding ซึ่งจะแสดงคำด้วยเวคเตอร์ ซึ่งเราสามารถใช้เวคเตอร์เหล่านั้นหาความสัมพันธ์ระหว่างคำได้&nbsp;<img align="center" style="width: 661px;" class="fr-dib fr-fic" src="images/C18E731A-F8A4-4BB8-9D49-7AA6B67C53A6_4_5005_c.jpeg" width="446">ตัวอย่าง Word embedding ของคำว่า compilation
+              </span>
+            </li>
+            <li style="text-align: center;">
+              <span style="line-height: 2.0;">Word embedding vector of specific word [</span>
+            </li>
+            <li style="text-align: center;">
+              <span style="line-height: 2.0;">&nbsp;2.00855709e-03 -3.21804953e-04 -2.46350025e-03 -2.99357204e-03 -3.11881653e-03 -4.21291776e-03 -3.33137182e-03 &nbsp;3.72275221e-03 &nbsp;2.24800152e-03 &nbsp;1.24061038e-03 -1.34038622e-03 -2.28501321e-03 -2.93607754e-03 &nbsp;4.97596944e-03 &nbsp;3.95735633e-03 &nbsp;2.75119464e-03 -1.02834648e-03 &nbsp;1.95835880e-03 &nbsp;3.25147738e-03 &nbsp;4.91005834e-03 -1.39257195e-03 &nbsp;3.31932423e-03 &nbsp;1.05178042e-03 -2.49711215e-03 -4.96040750e-03 &nbsp;2.06827978e-03 &nbsp;1.83808478e-03 &nbsp;1.67938753e-03 -4.71682195e-03 -1.62529352e-03 -1.81832490e-03 &nbsp;2.51263171e-03 &nbsp;4.16869437e-03 -1.65955385e-03 &nbsp;7.16611394e-05 &nbsp;2.57851975e-03 &nbsp;3.58524057e-03 &nbsp;4.06354759e-03 -3.02072428e-03 &nbsp;4.71638795e-03 -4.34571411e-03 &nbsp;1.27515465e-03 &nbsp;4.49224561e-03 &nbsp;4.90962900e-03 -2.68530613e-03 &nbsp;2.33156607e-03 &nbsp;4.12145490e-03 &nbsp;4.91033262e-03 -2.07173266e-03 &nbsp;2.83858413e-03 -1.49744109e-03 &nbsp;6.74214563e-04 &nbsp;1.50173495e-03 -3.06916446e-03 -4.37041838e-03 &nbsp;2.60650041e-03 -1.72179670e-03 -3.23353149e-03 &nbsp;3.69863398e-03 &nbsp;7.68622675e-04 &nbsp;4.16050898e-03 -3.84247093e-03 &nbsp;2.34231004e-03 &nbsp;2.83982372e-03 -2.55041732e-03 &nbsp;3.29475338e-03 -5.15968597e-04 -3.58476856e-04 -2.70299334e-03 -3.82747524e-03 &nbsp;2.56399740e-03 &nbsp;4.69670724e-03 &nbsp;2.83033610e-03 &nbsp;8.98368424e-04 &nbsp;3.32571263e-03 &nbsp;4.70500818e-04 -2.72163865e-03 -3.14013846e-03 &nbsp;2.51719575e-05 &nbsp;4.84884391e-03 -3.72806774e-03 &nbsp;4.07853024e-03 -3.11341672e-03 &nbsp;1.56537688e-03 -1.31230245e-05 &nbsp;4.82652197e-03 &nbsp;3.33505473e-03 &nbsp;4.58920607e-03 -2.83532823e-03 &nbsp;4.98890411e-03 -4.09269147e-03 &nbsp;4.15697554e-03 -1.98876904e-03 &nbsp;7.42294535e-04 -2.33020110e-04 &nbsp;1.99788046e-04 -1.92575424e-03 -7.15325237e-04 -3.68935475e-03 -1.62470166e-03]&nbsp;</span>
+            </li>
+            <li style="text-align: center;">
+              <span style="line-height: 2.0;">เวคเตอร์เหล่านี้สามารถนำไปหาระยะห่างระหว่างคำได้ด้วยการคำนวณ Euclidean distance&nbsp;</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-grey-15 u-section-8" id="sec-3f92">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Learning with Exercise</h1>
+        <p class="u-text u-text-default u-text-2">เรียนรู้ดูวิธีการทำ</p>
+        <img alt="" class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="1600" data-image-height="1067" src="images/485134-PGR103-853-min.jpg">
+        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1"><span class="u-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8494"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-8494"><polygon points="128 3 17 3 17 24 25 24 25 11 120 11 120 24 111 24 111 32 120 32 120 95 111 95 111 103 128 103"></polygon><path d="m25 24h-25v100h111v-100h-86zm78 92h-95v-63h95v63zm0-71h-95v-13h95v13z"></path><path d="m46 74v21h-21v-21h21m8-8h-37v37h37v-37z"></path><rect x="62" y="66" width="32" height="8"></rect><rect x="62" y="81" width="32" height="8"></rect><rect x="62" y="95" width="32" height="8"></rect></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-default u-text-3">
+                  <a href="Knowledge-Exercise.html" data-page-id="1538800719" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Word2vec ด้วย Gensim library</a>
+                </h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2"><span class="u-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c443"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-c443"><path d="m78.9 15.9c2.1 0 3.7 1.7 3.7 3.7v3.7h-37.2v-3.7c0-2 1.7-3.7 3.7-3.7h29.8m39.7 14.8-11.6 34.5c-0.5 1.5-1.9 2.5-3.5 2.5h-20.9v-3.7c0-2-1.7-3.7-3.7-3.7h-29.8c-2.1 0-3.7 1.7-3.7 3.7v3.7h-20.9c-1.6 0-3-1-3.5-2.5l-11.6-34.5h109.2m1.5 19.1v58.6c0 2-1.7 3.7-3.7 3.7h-104.7c-2.1 0-3.7-1.7-3.7-3.7v-58.6l5.9 17.7c1.5 4.5 5.8 7.6 10.6 7.6h20.9v3.7c0 2 1.7 3.7 3.7 3.7h29.8c2.1 0 3.7-1.7 3.7-3.7v-3.7h20.9c4.8 0 9.1-3 10.6-7.6l6-17.7m-44.9 17.9v7.4h-22.4v-7.4h22.4m15.3-44.9v-3.2c0-6.4-5.2-11.6-11.6-11.6h-29.8c-6.4 0-11.7 5.2-11.7 11.6v3.2h-29.5c-4.4 0-7.9 3.5-7.9 7.9v77.7c0 6.4 5.2 11.6 11.7 11.6h104.7c6.4 0 11.7-5.2 11.7-11.6v-77.7c0-4.4-3.6-7.9-7.9-7.9h-29.7z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-default u-text-4">Word2vec ด้วย Tensorflow</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3"><span class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-871e"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-871e"><path d="m117.4 76c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path><path d="m49.3 7.9c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path><path d="m90 7.9c0.7 0 1.4 0.3 1.9 0.8l27.4 27.4c1 1 1 2.7 0 3.8l-27.4 27.3c-0.5 0.5-1.2 0.8-1.9 0.8s-1.4-0.3-1.9-0.8l-27.3-27.3c-1-1-1-2.7 0-3.8l27.3-27.4c0.6-0.5 1.3-0.8 1.9-0.8m0-7.9c-2.8 0-5.5 1.1-7.5 3.1l-27.3 27.4c-2 2-3.1 4.7-3.1 7.5s1.1 5.5 3.1 7.5l27.4 27.4c2 2 4.7 3.1 7.5 3.1s5.5-1.1 7.5-3.1l27.4-27.4c2-2 3.1-4.7 3.1-7.5s-1.1-5.5-3.1-7.5l-27.5-27.4c-2-2-4.6-3.1-7.5-3.1z"></path><path d="m49.3 76c1.5 0 2.7 1.2 2.7 2.7v38.7c0 1.5-1.2 2.7-2.7 2.7h-38.7c-1.5 0-2.7-1.2-2.7-2.7v-38.7c0-1.5 1.2-2.7 2.7-2.7h38.7m0-7.9h-38.7c-5.8 0-10.6 4.8-10.6 10.6v38.7c0 5.8 4.8 10.6 10.6 10.6h38.7c5.8 0 10.6-4.8 10.6-10.6v-38.7c0-5.8-4.8-10.6-10.6-10.6z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-default u-text-5">Word2vec อ่านข้อมูลจาก CSV ด้วย Gensim</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-4">
+              <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"><span class="u-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 128 128" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b296"></use></svg><svg class="u-svg-content" viewBox="0 0 128 128" id="svg-b296"><path d="m26.4 108.7c-1.2 0-2.2-1-2.2-2.2s1-2.2 4.7-2.2h48.7v-7.4h-31.2v-9.9h31.2v-8.4h-58.7c-7.7 0-10.6-3-10.6-6.6v-57.1c0-3.7 3-6.6 6.6-6.6h81.2c3.7 0 6.6 3 6.6 6.6v27h8.3v-27c0-8.2-6.7-14.9-14.9-14.9h-81.2c-8.2 0-14.9 6.7-14.9 14.9v57.1c0 8.2 6.7 14.9 14.9 14.9h23.2v10.1h-13.8c-4.3 0-8.5 3.7-8.5 9.5v0.2c0 4.6 3.7 9.3 8.3 9.3h53.5v-7.3h-51.2z"></path><path d="m118 41.9h-30c-5.8 0-10.5 4.7-10.5 10.6 0 0 0.1 66.3 0.1 66.4 0 4.3 5.1 9 10.4 9h30c5.6 0 10.2-4.4 10.5-10.1v-65.3c0-5.9-4.7-10.6-10.5-10.6zm2.4 75.5c-0.1 1.3-1.1 2.3-2.4 2.3h-30c-1 0-1.9-0.7-2.2-1.6l-0.2-65.6c0-1.3 1.1-2.4 2.4-2.4h30c1.3 0 2.4 1.1 2.4 2.4v64.9z"></path></svg>
+            
+            
+          </span>
+                <h4 class="u-align-center u-text u-text-default u-text-6">Responsive</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-white u-section-9" id="sec-461b">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Demo<br>Word2vec ด้วย Gensim
+        </h2>
+        <div class="u-accordion u-spacing-20 u-accordion-1">
+          <div class="u-accordion-item">
+            <a class="active u-accordion-link u-active-palette-1-light-3 u-border-1 u-border-active-palette-1-light-2 u-border-grey-15 u-border-hover-palette-1-light-2 u-button-style u-hover-palette-1-light-3 u-text-active-palette-1-base u-text-grey-50 u-text-hover-palette-1-base u-white u-accordion-link-1" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="true">
+              <span class="u-accordion-link-text">Import Word2vec จาก Gensim</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.656 490.656" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4e56"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 490.656 490.656" x="0px" y="0px" id="svg-4e56" style="enable-background:new 0 0 490.656 490.656;"><g><g><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-active u-accordion-pane u-align-left u-container-style u-accordion-pane-1" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
+              <div class="u-container-layout u-valign-top u-container-layout-1">
+                <p class="u-text u-text-2">from gensim.models import Word2Vec<br>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item">
+            <a class="u-accordion-link u-active-palette-1-light-3 u-border-1 u-border-active-palette-1-light-2 u-border-grey-15 u-border-hover-palette-1-light-2 u-button-style u-hover-palette-1-light-3 u-text-active-palette-1-base u-text-grey-50 u-text-hover-palette-1-base u-white u-accordion-link-2" id="link-accordion-05cb" aria-controls="accordion-05cb" aria-selected="false">
+              <span class="u-accordion-link-text"> กำหนดชุดข้อมูลเทรน</span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.656 490.656" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c1b3"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 490.656 490.656" x="0px" y="0px" id="svg-c1b3" style="enable-background:new 0 0 490.656 490.656;"><g><g><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-2" id="accordion-05cb" aria-labelledby="link-accordion-05cb">
+              <div class="u-container-layout u-container-layout-2">
+                <p class="u-text u-text-3">
+                  <br>sentences = [['compiler', 'interpreter', 'implementation'],<br> ['compilation', 'compiler', 'machine code', 'compilation', 'compiler'],<br> ['Java', 'is', 'compilation'],<br> ['C', 'is', 'compilation'],<br> ['Pascal', 'is', 'compilation', 'program']]
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-3">
+            <a class="u-accordion-link u-active-palette-1-light-3 u-border-1 u-border-active-palette-1-light-2 u-border-grey-15 u-border-hover-palette-1-light-2 u-button-style u-hover-palette-1-light-3 u-text-active-palette-1-base u-text-grey-50 u-text-hover-palette-1-base u-white u-accordion-link-3" id="link-accordion-a6bb" aria-controls="accordion-a6bb" aria-selected="false">
+              <span class="u-accordion-link-text"> คำสั่งเทรนโมเดลด้วย CBOW technique<br>
+              </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.656 490.656" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-aa3a"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 490.656 490.656" x="0px" y="0px" id="svg-aa3a" style="enable-background:new 0 0 490.656 490.656;"><g><g><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-3" id="accordion-a6bb" aria-labelledby="link-accordion-a6bb">
+              <div class="u-container-layout u-container-layout-3">
+                <p class="u-text u-text-4"> model = Word2Vec(sentences, size=100, min_count=1,sg=0)</p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-4">
+            <a class="u-accordion-link u-active-palette-1-light-3 u-border-1 u-border-active-palette-1-light-2 u-border-grey-15 u-border-hover-palette-1-light-2 u-button-style u-hover-palette-1-light-3 u-text-active-palette-1-base u-text-grey-50 u-text-hover-palette-1-base u-white u-accordion-link-4" id="link-accordion-a6bb" aria-controls="accordion-a6bb" aria-selected="false">
+              <span class="u-accordion-link-text"> คำสั่งเพื่อทำงานกับโมเดล<br>
+              </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.656 490.656" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-aa53"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 490.656 490.656" x="0px" y="0px" id="svg-aa53" style="enable-background:new 0 0 490.656 490.656;"><g><g><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-4" id="accordion-a6bb" aria-labelledby="link-accordion-a6bb">
+              <div class="u-container-layout u-container-layout-4">
+                <p class="u-text u-text-5"> # แสดงสรุปเกี่ยวกับโมเดล<br>print("Model summary")<br>print(model)<br>
+                  <br># แสดงคำศัพท์ทั้งหมด<br>word = list(model.wv.vocab)<br>print(word)<br>
+                  <br># แสดงค่าในเวคเตอร์ที่แสดงคำว่า compilation<br>print("Word embedding vector of specific word ")<br>print(model['compilation'])<br>
+                  <br># แสดงคำที่ใกล้เคียงจำนวนสามอันดับแรก()<br>result = model.most_similar(positive=['compilation','compiler','implementation'], topn=3)<br>print(result)<br>#เปรียบเทียบ Similarity ระหว่าง Compiler และ compilation<br>print(model.similarity('compiler','compilation'))
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-accordion-item u-accordion-item-5">
+            <a class="u-accordion-link u-active-palette-1-light-3 u-border-1 u-border-active-palette-1-light-2 u-border-grey-15 u-border-hover-palette-1-light-2 u-button-style u-hover-palette-1-light-3 u-text-active-palette-1-base u-text-grey-50 u-text-hover-palette-1-base u-white u-accordion-link-5" id="link-accordion-a6bb" aria-controls="accordion-a6bb" aria-selected="false">
+              <span class="u-accordion-link-text">คำสั่งบันทึกและโหลดโมเดล<br>
+              </span><span class="u-accordion-link-icon u-icon u-text-grey-40 u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.656 490.656" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-d47c"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 490.656 490.656" x="0px" y="0px" id="svg-d47c" style="enable-background:new 0 0 490.656 490.656;"><g><g><path d="M487.536,120.445c-4.16-4.16-10.923-4.16-15.083,0L245.339,347.581L18.203,120.467c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083l234.667,234.667c2.091,2.069,4.821,3.115,7.552,3.115s5.461-1.045,7.531-3.136l234.667-234.667    C491.696,131.368,491.696,124.605,487.536,120.445z"></path>
+</g>
+</g></svg></span>
+            </a>
+            <div class="u-accordion-pane u-align-left u-container-style u-accordion-pane-5" id="accordion-a6bb" aria-labelledby="link-accordion-a6bb">
+              <div class="u-container-layout u-container-layout-5">
+                <p class="u-text u-text-6"> # คำสั่งในการบันทึกโมเดลเพื่อนำไปใช้ต่อโดยไม่ต้องรันใหม่<br>model.save('model.bin')<br># คำสั่งในการโหลดโมเดลที่บันทึกไว้มาใช้งาน<br>new_model = Word2Vec.load('model.bin')<br>print(new_model)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-10" id="carousel_0f1d" data-image-width="1620" data-image-height="1080">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-1" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">nextcodecamp</h3>
         <h6 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-2">Platform for open knowledge sharing</h6>
