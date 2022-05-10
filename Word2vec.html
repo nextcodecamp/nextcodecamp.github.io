@@ -26,6 +26,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -84,7 +85,7 @@
             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
               <h3 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-palette-2-base u-text-1">01</h3>
               <h5 class="u-align-left u-custom-font u-font-montserrat u-text u-text-2">
-                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="#">word2vec</a>
+                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Word2vec.html#carousel_aa84" data-page-id="2222915400">word2vec</a>
               </h5>
               <p class="u-align-left u-text u-text-3">แนะนำ word2vec หลักการในการประมวลผลข้อความใน `word2vec</p>
             </div>
@@ -93,7 +94,7 @@
             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
               <h3 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-palette-2-base u-text-4">02</h3>
               <h5 class="u-align-left u-custom-font u-font-montserrat u-text u-text-5">
-                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="#">Vector space model, TF/IDF</a>
+                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="Word2vec.html#carousel_7b9c" data-page-id="2222915400">Vector space model, TF/IDF</a>
               </h5>
               <p class="u-align-left u-text u-text-6">หลักการ Vector space model ในการแสดงข้อความในเอกสารซึ่งเป็นเทคนิคในการสืบค้นสารสนเทศ (Information retrieval)<br>TF/IDF เทคนิควิเคราะห์ความถี่ของคำ
               </p>
@@ -103,7 +104,7 @@
             <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
               <h3 class="u-align-left u-custom-font u-font-montserrat u-text u-text-default u-text-palette-2-base u-text-7">03</h3>
               <h5 class="u-align-left u-custom-font u-font-montserrat u-text u-text-8">
-                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="#">Word embedding<br>
+                <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="Word2vec.html#carousel_dcff" data-page-id="2222915400">Word embedding<br>
                 </a>
               </h5>
               <p class="u-align-left u-text u-text-9">การกำหนดค่าน้ำหนักของคำในในรูปแบบเว็คเตอร์</p>
@@ -201,7 +202,7 @@
                 <div class="u-container-layout u-container-layout-2">
                   <p class="u-text u-text-grey-40 u-text-3">
                     <span style="font-weight: 700;">Word embedding</span> คือวิธีการแสดงข้อความหรือเท็กซ์ให้อยู่ในรูปแบบของเวคเตอร์ที่แสดงค่าข้อมูลด้วยตัวเลข&nbsp;<br>Google แนะนำ <span style="font-weight: 700;">One-hot encoding</span> เป็นวิธีพื้นฐานในการแสดงคำ (Vocabulary) ที่ปรากฎในข้อความ เช่น จากภาพ Vocabulary แสดงในคอลัมภ์ของเวคเตอร์ และคำแต่ละคำจากเอกสารหรือข้อความจะสัมพันธ์กับเวคเตอร์ เช่น กำหนด Dimensions ของเวตเคอร์แสดงคำศัพท์ คือ tonight I, you, eating, home<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tonight&nbsp; I&nbsp; &nbsp; &nbsp;you&nbsp; &nbsp; &nbsp;eating&nbsp; &nbsp;home&nbsp; &nbsp; &nbsp;<br>ประโยคคือ Tonight, I am waiting for you for eating together at home.<br>tonight = [ 1, 0, 0, 0, 0]<br>I = [0,1,0,0,0]<br>am=[0,0,0,0,0]<br>waiting=[0,0,0,0,0]<br>for=[0,0,0,0,0]<br>you=[0,0,1,0,0]<br>eating=[0,0,0,1,0]<br>together=[0,0,0,0,0]<br>at=[0,0,0,0,0]<br>home=[0,0,0,0,1]&nbsp;<br>
-                    <br>ข้อเสียของ One-hot encoding คือจะมีเวคเตอร์ที่มีค่า 0 อยู่เป็นจำนวนมาก ซึ่งอาจทำให้เสียหน่วยความจำมาก เราเรียกเวคเตอร์ลักษณะนี้ว่า <span style="font-weight: 700;">Sparse vector</span>&nbsp;<br>อีกเทคนิคหนึ่งที่สามารถทำ encoding ได้คือ การระบุหมายเลขของคำทีพบเช่น&nbsp;<br>vector = [1,2,6,7,10]&nbsp;<br>แต่วิธีนี้ก็ยังไม่สามารถแสดงให้เห็นความสัมพันธ์ของคำได้<br>
+                    <br>ข้อเสียของ One-hot encoding คือจะมีเวคเตอร์ที่มีค่า 0 อยู่เป็นจำนวนมาก ซึ่งอาจทำให้เสียหน่วยความจำมาก เราเรียกเวคเตอร์ลักษณะนี้ว่า <span style="font-weight: 700;">Sparse vector</span>&nbsp;<br>อีกเทคนิคหนึ่งที่สามารถทำ encoding ได้คือ การระบุหมายเลขของคำทีพบในประโยคเช่นจากประโยคตัวอย่างข้างต้นจะได้เวคเตอร์คือ&nbsp;<br>sentence = [1,2,6,7,10]&nbsp;<br>แต่วิธีนี้ก็ยังไม่สามารถแสดงให้เห็นความสัมพันธ์ของคำได้&nbsp; ดังนั้นการแสดงคำในรูปแบบอื่นเช่นบนระนาบโดยแสดงเวคเตอร์แทนคำที่นำไปหา Distance เช่น Word embedding จึงเป็นวิธีการที่จำเป็นต่อไป<br>
                     <br>
                     <span style="font-weight: 700;">Word embedding</span> ใช้เทคนิคในการวิเคราะห์ความสัมพันธ์ของคำ โดยพิจารณาบริบทของคำ (ตำแหน่งของคำและคำอื่นๆข้างเคียง)<br>เวคเตอร์แสดงค่าน้ำหนักที่ได้จากการเรียนรู้โดยใช้ฐานข้อมูลคำหรือคอร์ปัส&nbsp; Neural network นำไปใช้ในการเรียนรู้เพื่อหาค่าน้ำหนักของคำ ซึ่งค่าน้ำหนักของคำในเวคเตอร์แสดงความสัมพันธ์เชิงความหมาย (พิจารณาจากบริบทของคำ) ซึ่งได้จากการเรียนรู้เวคเตอร์อาจมีขนาด 4-dimension ไปจนถึง 1024-dimension ตัวอย่าง (ดูภาพซ้ายมือ)<br>&nbsp;<br>Word2vec สนับสนุนการเรียนรู้ด้วยเทคนิคจำนวน 2 เทคนิค คือ<br>1. Continuous bag-of-word model&nbsp;<br>2. Continuous skip-gram model&nbsp;&nbsp;<br>
                   </p>
@@ -408,7 +409,15 @@
         </div>
       </div>
     </section>
-    <section class="u-align-center u-clearfix u-image u-shading u-section-10" id="carousel_0f1d" data-image-width="1620" data-image-height="1080">
+    <section class="u-align-left u-clearfix u-section-10" id="sec-6352">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+          <h1 style="text-align: left;">ข้อเท็จจริงเกี่ยวกับ Word2vec</h1>
+          <p style="text-align: left;">การวัดค่าความเหมือนของคำไม่ว่าจะเป็น CBOW และ Skip-gram เป็นเพียงค่าคาดการณ์ซึ่งลำดับของตำแหน่งของคำเป็นอิสระ แต่ในการเรียนรู้ของ Neuron network คงไว้ซึ่งการพิจารณาโดยใช้ตำแหน่งในระหว่างการเรียนรู้</p>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-image u-shading u-section-11" id="carousel_0f1d" data-image-width="1620" data-image-height="1080">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-1" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">nextcodecamp</h3>
         <h6 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-2">Platform for open knowledge sharing</h6>
