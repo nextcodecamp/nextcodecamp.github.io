@@ -121,6 +121,11 @@
   margin: 0;
 }
 
+.u-section-2 .u-btn-3 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-section-2 .u-image-2 {
   height: 204px;
   margin-top: 20px;
@@ -133,7 +138,7 @@
   margin: 20px 0 0;
 }
 
-.u-section-2 .u-btn-3 {
+.u-section-2 .u-btn-4 {
   font-size: 0.875rem;
   letter-spacing: 1px;
   border-style: none none solid;
@@ -165,7 +170,7 @@
   margin: 20px 0 0;
 }
 
-.u-section-2 .u-btn-4 {
+.u-section-2 .u-btn-5 {
   font-size: 0.875rem;
   letter-spacing: 1px;
   border-style: none none solid;
